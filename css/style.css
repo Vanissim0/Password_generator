@@ -3,7 +3,7 @@
     font-family: 'Quantico', sans-serif;
 }
 body {
-    background-color: #fff;
+    background-color: #f8f8ff;
     display: flex;
     font-family: 'Quantico', sans-serif;
     flex-direction: column;
@@ -29,6 +29,11 @@ p {
 	width: 340px;
 	max-width: 100%;
     border-radius: 20px;
+    /* border: 20px solid #ececec; */
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+            10px 10px 15px rgba(70,70,70,0.12),
+            inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
+           inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 .result {
 	background-color: rgba(0, 0, 0, 0.4);
@@ -60,11 +65,20 @@ p {
 	cursor: pointer;
 	font-size: 16px;
 	padding: 8px 12px;
-	background-color: #c5d0e6;
+	background-color: #f8f8ff;
+    
 }
 .btn-big {
-	display: block;
-	width: 100%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 20px; */
+	width: 120px;
+    border-radius: 7px;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+            10px 10px 15px rgba(70,70,70,0.12),
+            inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
+           inset 10px 10px 15px rgba(70, 70, 70, 0.12)
 }
 .setting {
 	display: flex;
