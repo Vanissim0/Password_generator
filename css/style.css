@@ -1,9 +1,16 @@
+:root {
+	--white: #ffffff;
+	--body-color: #f5f5f5;
+	--greyLight: #c8d0e7;
+	--light-color: #e028e0;
+	--text-color: #151719;
+}
 * {
     box-sizing: border-box;
     font-family: 'Quantico', sans-serif;
 }
 body {
-    background-color: #f8f8ff;
+    background-color: var(--body-color);
     display: flex;
     font-family: 'Quantico', sans-serif;
     flex-direction: column;
@@ -15,28 +22,41 @@ body {
 h3 {
     text-align: center;
     margin: 10px 0 10px;
+	color: var(--text-color);
+}
+input {
+	outline:none;
 }
 input[type=checkbox] {
     margin-right: 0;
+	cursor: pointer;
+	box-shadow: inset .2rem .2rem .5rem var(--greyLight), 
+				inset -.2rem -.2rem .5rem var(--white);
 }
-p {
-    margin: 5px 0;
+input[type=number] {
+	height: 22px;
+	color: var(--text-color);
+	/* font-weight: 600; */
+	border: none;
+	border-radius: 5px;
+	box-shadow: inset .2rem .2rem .5rem var(--greyLight), 
+				inset -.2rem -.2rem .5rem var(--white);
+}
+label {
+    margin: 2px 0;
+	color: var(--text-color);
 }
 .main__app {
-	background-color: #f8f8ff;
-	box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+	background-color: var(--body-color);
+	/* box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2); */
 	padding: 20px;
 	width: 340px;
 	max-width: 100%;
     border-radius: 20px;
-    /* border: 20px solid #ececec; */
-    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
-            10px 10px 15px rgba(70,70,70,0.12),
-            inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
-           inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+    box-shadow: .3rem .3rem .6rem var(--greyLight), 
+				-.2rem -.2rem .5rem var(--white);
 }
 .result {
-	background-color: rgba(0, 0, 0, 0.4);
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -46,10 +66,15 @@ p {
 	padding: 12px 10px;
 	height: 50px;
 	width: 100%;
+	border-radius: 10px;
+	/* box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
+           		inset 10px 10px 15px rgba(70, 70, 70, 0.12); */
+	box-shadow: inset .2rem .2rem .5rem var(--greyLight), 
+				inset -.2rem -.2rem .5rem var(--white);
 }
 .result #result {
     word-wrap: break-word;
-  max-width: calc(100% - 40px);
+  	max-width: calc(100% - 40px);
 }
 .result .btn {
 	position: absolute;
@@ -57,28 +82,62 @@ p {
 	right: 5px;
 	height: 40px;
 	width: 40px;
-    /* font-size: 20px; */
 }
 .btn {
 	border: none;
-	color: #000;
 	cursor: pointer;
 	font-size: 16px;
 	padding: 8px 12px;
-	background-color: #f8f8ff;
-    
+	background-color: var(--body-color);
+}
+.btn-clip {
+	/* content: ""; */
+	border-radius: 5px;
+	background-color: var(--body-color);
+	box-shadow: .2rem .2rem .3rem var(--greyLight), 
+				-.1rem -.1rem .3rem var(--white);
 }
 .btn-big {
 	display: flex;
     justify-content: center;
     align-items: center;
+	background-color: var(--text-color);
     /* padding: 20px 20px; */
-	width: 120px;
+	width: 100%;
     border-radius: 7px;
-    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+	color: var(--white);
+	box-shadow: 10px 10px 20px var(--greyLight), 
+				-10px -10px 20px var(--white);
+	transition: 0.33s ease;
+	text-shadow: 0 0 10px var(--white), 0 0 20px var(--white), 0 0 30px var(--light-color),
+				 0 0 40px var(--light-color), 0 0 50px var(--light-color), 0 0 60px var(--light-color);
+				
+}
+.btn-big:hover {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: var(--white);
+	color: var(--text-color);
+	width: 100%;
+    border-radius: 7px;
+    box-shadow: -20px -20px 25px rgba(255,255,255,0.5),
             10px 10px 15px rgba(70,70,70,0.12),
             inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
-           inset 10px 10px 15px rgba(70, 70, 70, 0.12)
+           inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+	text-shadow: none;
+}
+.btn-big:active {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 20px; */
+	width: 100%;
+    border-radius: 7px;
+	box-shadow: -20px -20px 25px rgba(255,255,255,0.5),
+				10px 10px 15px rgba(70,70,70,0.12),
+				inset .2rem .4rem 3rem rgba(70,70,70,0.12), 
+				inset -.3rem -.4rem 2rem rgba(255,255,255,0.5);
 }
 .setting {
 	display: flex;

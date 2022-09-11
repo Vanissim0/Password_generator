@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Password Generator</title>
+    <title>Vanissimo's Password Generator</title>
 </head>
 <body>
     <main>
@@ -13,8 +13,8 @@
             <h3>Password Generator</h3>
             <div class="result">
                 <span id="result"></span>
-                <button class="btn btn-clip">
-                    <i class="fa-solid fa-clipboard" aria-hidden="true"></i>
+                <button class="btn btn-clip" id="clipboard">
+                    <img src="/img/clipboard-solid.svg" alt="">
                 </button>
             </div>
             <div class="settings">
@@ -39,10 +39,11 @@
                     <input type="checkbox" id="uppercase" checked>
                 </div>
             </div>
-            <button class="btn btn-big">
+            <button class="btn btn-big" id="generate">
                 Generate password
             </button>
         </div>
     </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
